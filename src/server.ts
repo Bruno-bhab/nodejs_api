@@ -1,11 +1,11 @@
-import express from 'express';
-import { categoriesRoutes } from './routes/categories.routes'
+import express from "express";
+import { categoriesRoutes } from "./routes/categories.routes";
+import { specificationsRoutes } from "./routes/specifications.routes";
 
-const app = express()
-app.use(express.json())
+const app = express();
+app.use(express.json());
 
-//Routes
-app.use("/categories", categoriesRoutes)
+app.use("/categories", categoriesRoutes);
+app.use("/specifications", specificationsRoutes);
 
-//Server start
-app.listen(3333, () => console.log("Server is running!"))
+app.listen(3333, () => console.log("Server is running!"));
